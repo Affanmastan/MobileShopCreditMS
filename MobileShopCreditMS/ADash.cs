@@ -19,10 +19,17 @@ namespace MobileShopCreditMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();   
-            var vc = new  ViewCustomer();
+            this.Hide();
+            var vc = new ViewCustomer();
             vc.Show();
-            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var vc = new Form1();
+            vc.Show();
         }
     }
 }

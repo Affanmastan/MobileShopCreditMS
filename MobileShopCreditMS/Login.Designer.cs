@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button2 = new Button();
             label2 = new Label();
             button1 = new Button();
             textPass = new TextBox();
             textBox1 = new TextBox();
-            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +49,17 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(378, 381);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(212, 234);
+            button2.Name = "button2";
+            button2.Size = new Size(92, 25);
+            button2.TabIndex = 6;
+            button2.Text = "CLEAR";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label2
             // 
@@ -92,16 +103,6 @@
             textBox1.PlaceholderText = "ENTER USERNAME";
             textBox1.Size = new Size(197, 23);
             textBox1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(212, 234);
-            button2.Name = "button2";
-            button2.Size = new Size(92, 25);
-            button2.TabIndex = 6;
-            button2.Text = "CLEAR";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // Login
             // 

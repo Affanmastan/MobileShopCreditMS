@@ -22,7 +22,7 @@ namespace MobileShopCreditMS
             InitializeComponent();
 
         }
-
+        
         //Data Source=(localdb)\local;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +39,8 @@ namespace MobileShopCreditMS
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=project;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+                    SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\SAMSUNG\Documents\project.mdf;Integrated Security=True;Connect Timeout=30");
+                   // SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=project;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
 
                     //chnages the db to MSlocal with dbname=project and table name=usr
                     string query = "select * from usr where name='" + textBox1.Text + "'and pass='" + textPass.Text + "'";
@@ -108,6 +109,11 @@ namespace MobileShopCreditMS
         {
             textBox1.Clear();
             textPass.Clear();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
